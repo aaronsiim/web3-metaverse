@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { useMoralis } from "react-moralis";
+import profile from '../assets/profile.png';
 
 function Login() {
     const { authenticate, isInitialized } = useMoralis();
@@ -12,7 +13,7 @@ function Login() {
                 {/* Web3 Metaverse Logo */}
                 <Image
                     className="object-cover rounded-full"
-                    src="https://links.papareact.com/3pi"
+                    src={profile}
                     height={200}
                     width={200}
                 />
@@ -20,7 +21,7 @@ function Login() {
                 {/* Login Button */}
                 <button
                     onClick={authenticate}
-                    className="bg-yellow-500 rounded-lg p-5 font-bold animate-pulse"
+                    className="bg-blue-500 rounded-lg p-5 font-bold animate-pulse"
                 >
                     Login to the Metaverse
                 </button>

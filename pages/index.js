@@ -12,7 +12,7 @@ export default function Home() {
     <div className="h-screen">
       <Head>
         <title>Web3 Metaverse</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/profile.png" />
       </Head>
 
       <h1>Welcome to the App</h1>
