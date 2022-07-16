@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Login from '../components/Login'
 import { useMoralis } from "react-moralis";
+import Header from '../components/Header';
+import Messages from '../components/Messages';
 
 
 export default function Home() {
@@ -9,20 +11,23 @@ export default function Home() {
   if (!isAuthenticated) return <Login />;
 
   return (
-    <div className="h-screen">
+    <div className="h-screen overflow-y-scroll bg-gradient-to-b from-black to-red-900 overflow-hidden">
       <Head>
         <title>Web3 Metaverse</title>
         <link rel="icon" href="/profile.png" />
       </Head>
 
       <h1>Welcome to the App</h1>
-      <button
-        className='bg-red-500 rounded-lg p-5 font-bold animate-pulse'
-        onClick={logout}
-      >
-        Logout
-      </button>
 
+
+      <div className='max-w-screen-2xl mx-auto'>
+        {/* Header */}
+        <Header />
+
+        {/* Messages */}
+        <Messages />
+
+      </div>
     </div>
   )
 }
