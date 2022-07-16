@@ -20,7 +20,7 @@ function Messages() {
         [],
         {
 
-            live: true
+            live: 'true'
         }
     );
 
@@ -51,8 +51,9 @@ function Messages() {
 
             {/* Notification */}
             <div ref={endOfMessagesRef} className="text-center text-gray-400 mt-5">
-                <p>You're up to date {user.getUsername()}!🎉</p>
+                <p>You&apos;re up to date {user.getUsername()}!🎉</p>
             </div>
+
 
         </div>
     )
